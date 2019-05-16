@@ -21,7 +21,7 @@ app.use('/challenge', function (req, res) {
         console.log(req.body.event.text);
         var data = {
             text: 'HELLO WORLD',
-            channel: req.bodychannel
+            channel: req.body.event.channel
           }
         web.chat.postMessage(data);
         res.send("HELLO MY PEEPS!");
