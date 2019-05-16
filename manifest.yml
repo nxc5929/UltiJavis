@@ -1,0 +1,7 @@
+applications:
+- name: utli-javis
+  memory: 768M
+  instances: 1
+  command: node index.js
+  buildpacks: 
+    - https://github.com/cloudfoundry/nodejs-buildpack
