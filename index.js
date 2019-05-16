@@ -26,6 +26,6 @@ app.use('/challenge', function (req, res) {
     res.send(req.body.challenge);
 });
 
-app.listen(port, function () {
+app.listen(this.port, function () {
   console.log('Example app listening on port 8080!');
 });
