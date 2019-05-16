@@ -9,19 +9,13 @@ app.use(bodyParser.urlencoded({
 
 app.use(bodyParser.json())
 
-app.get('/', function (req, res) {
-  res.send('Hello World!');
-});
-
-app.use('/findFood', function (req, res) {
-    console.log(req.body)
-    res.send('Hello World!');
-  });
-
 app.use('/challenge', function (req, res) {
-    console.log(req)
-    console.log(req.body.challenge)
-    res.send(req.body.challenge);
+    console.log(req.body)
+    if(req.body.challenge){
+        res.send(req.body.challenge);
+    }else{
+        res.send("HELLO MY PEEPS!");
+    }
 });
 
 app.listen(process.env.PORT || 8080, function () {
