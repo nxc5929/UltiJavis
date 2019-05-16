@@ -2,7 +2,7 @@ var express = require('express');
 var bodyParser = require('body-parser')
 const { WebClient } = require('@slack/web-api');
 
-const web = new WebClient("xoxb-637835815733-631566328737-8N42X5apPWM7pDZikOdyIh3R");
+const web = new WebClient("xoxb-637835815733-631566328737-xpvDYxOerSFYWPULekOgSxBj");
 var app = express();
 
 app.use(bodyParser.urlencoded({
