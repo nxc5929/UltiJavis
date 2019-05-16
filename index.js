@@ -11,7 +11,8 @@ app.use(bodyParser.urlencoded({
 app.use(bodyParser.json())
 
 const options = {
-  hostname: 'https://slack.com/api/chat.postMessage',
+  hostname: "slack.com",
+  path: "/api/chat.postMessage",
   method: 'POST',
   authorization: "Bearer xoxb-637835815733-631566328737-BhmZAu8I8qrWcDVAe2HOpiDB",
   headers: {
