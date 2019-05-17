@@ -23,9 +23,9 @@ app.use('/challenge', function (req, res) {
         }
         var text = req.body.event.text;
         console.log(text)
-        var resposne = text; //THIS IS WHT CHAT BOT WILL SAY
+        var response = text; //THIS IS WHT CHAT BOT WILL SAY
         var data = {
-            text: resposne,
+            text: response,
             channel: req.body.event.channel
           }
         web.chat.postMessage(data);
