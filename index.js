@@ -1,3 +1,5 @@
+var deals = require('./ultideals.json')
+
 function containsIgnoreCase(list, str) {
     for (let member of list)
         if (str.toUpperCase() === member.toUpperCase())
@@ -5,9 +7,8 @@ function containsIgnoreCase(list, str) {
     return false
 }
 
-function extractTags(input, fileName) {
+function extractTags(input) {
 
-    var deals = require(fileName)
     var tags = ["random"]
     for (let restaurant of deals.food) {
         if (!tags.includes(restaurant.category))
@@ -24,14 +25,15 @@ function extractTags(input, fileName) {
     return results
 }
 
-function constructResponse(tags) {
+function constructResponse(input) {
 
+    var tags = extractTags(input)
     var suggestions = []
 
     if (tags.length == 0) {
         return "No results found"
     }
-    var deals = require('./ultideals.json')
+
     for (let tag of tags) {
         for (let restaurant of deals.food)
             if (restaurant.category == tag)
@@ -72,7 +74,7 @@ app.use('/challenge', function (req, res) {
         }
         var text = req.body.event.text;
         console.log(text)
-        var response = text; //THIS IS WHT CHAT BOT WILL SAY
+        var response = constructResponse(text); //THIS IS WHT CHAT BOT WILL SAY
         var data = {
             text: response,
             channel: req.body.event.channel
@@ -82,9 +84,7 @@ app.use('/challenge', function (req, res) {
     }
 });
 
-// app.listen(process.env.PORT || 8080, function () {
-//   console.log('Example app listening on port ' + process.env.PORT || 8080);
-// });
+app.listen(process.env.PORT || 8080, function () {
+  console.log('Example app listening on port ' + process.env.PORT || 8080);
+});
 
-var thing = constructResponse(["american"])
-console.log(thing)
