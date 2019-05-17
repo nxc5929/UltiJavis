@@ -36,7 +36,7 @@ function constructResponse(input) {
 
     for (let tag of tags) {
         for (let restaurant of deals.food)
-            if (restaurant.category == tag)
+            if (restaurant.category == tag || tag.toLowerCase() === "random")
                 suggestions.push(restaurant)
     }
     var restaurant = suggestions[Math.floor(Math.random()*suggestions.length)];
@@ -87,4 +87,3 @@ app.use('/challenge', function (req, res) {
 app.listen(process.env.PORT || 8080, function () {
   console.log('Example app listening on port ' + process.env.PORT || 8080);
 });
-
