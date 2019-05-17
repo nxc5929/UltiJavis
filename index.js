@@ -31,7 +31,7 @@ function constructResponse(input) {
     var suggestions = []
 
     if (tags.length == 0) {
-        return "No results found"
+        return "Unfortunately I didn't find anything to match that. Please forgive me."
     }
 
     for (let tag of tags) {
@@ -41,8 +41,10 @@ function constructResponse(input) {
     }
     var restaurant = suggestions[Math.floor(Math.random()*suggestions.length)];
 
-    var response = "I found a place you might like. Have you tried: \n"
-    response = response + restaurant.name + "\n" + restaurant.address + "\n"
+    var response = "I found a place you might like. Have you tried "
+    response = response + restaurant.name + "?\n"
+    response = response + "Here's more information:\n"
+    response = response + restaurant.address + "\n"
     response = response + restaurant.discount
 
     return response
