@@ -116,7 +116,7 @@
       "name": "My Pure Life",
       "category": "american",
       "discount": "Meal delivery offering Ultimate employees 20% off normal retail price PLUS $50 off your first order using promo code peoplefirst50. Meals are delivered Sunday and Wednesday evenings between 6:00pm-11:00pm. NOTE: - you must register as a member with your CORPORATE email",
-      "address": "N/A",
+      "address": "This is a Delivery Service",
       "url": "https://s3-media3.fl.yelpcdn.com/bphoto/ukG1zfLvSKj3WvrwR_8e1A/ls.jpg"
     },
     {
@@ -186,7 +186,7 @@
       "name": "The Good Kitchen",
       "category": "american",
       "discount": "Meal Delivery: 15% discount to all UltiPeeps within the US with promo code: Ultimate15 on their first order",
-      "address": "N/A",
+      "address": "This is a Delivery Service",
       "url": "https://q7a2n8s8.stackpathcdn.com/wp-content/uploads/2018/12/GoodKitchenMeals.jpg"
     },
     {
@@ -215,25 +215,25 @@
       "name": "Hotel Discounts Worldwide",
       "category": "hotels",
       "discount": "Hotel Engine offers average savings of 26% at 150,000+ hotels worldwide. See: https://ultihome.ultimatesoftware.com/spaces/406/article/2ecbeaea-c63e-4322-baac-8eb906d2c273/71235",
-      "address": "N/A"
+      "address": "This is a Delivery Service"
     },
     {
       "name": "Miami HEAT Game Tickets",
       "category": "sports",
       "discount": "Pricing on group tickets for Ultimate employees, families and clients to upcoming Miami Heat home games! Questions? Interested in 100-Level seating options? Please contact Miami HEAT Account Manager, Mikaela Armstrong at (786)777-4291 or via email at Mikaela.Armstrong@HEAT.com",
-      "address": "N/A"
+      "address": "This is a Delivery Service"
     },
     {
       "name": "Miami Marlins discount tickets",
       "category": "sports",
       "discount": "Peeps, the Miami Marlins are now offering US discounted tickets for specific games. Please see the link below. Discount Link: https://groupmatics.events/group/Ultimatesoftwareemployeeperks",
-      "address": "N/A"
+      "address": "This is a Delivery Service"
     },
     {
       "name": "Super Group Ticket Offers - Broward Center for the Performing Arts",
       "category": "shows",
       "discount": "Go to: http://www.browardcenter.org/ticketoffers or call 954.660.6307 for more information and special ticket offers on these shows and more! Use BCPASG promo code for Broward Center and AACCSG promo code for Aventura Arts and Cultural Center.",
-      "address": "N/A"
+      "address": "This is a Delivery Service"
     }
   ]
 }
