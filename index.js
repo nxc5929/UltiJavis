@@ -15,17 +15,16 @@ app.use(bodyParser.json())
 app.use('/challenge', function (req, res) {
     console.log(req.body)
     if(req.body.challenge){
-        console.log("SENT CHALLENGE");
         res.send(req.body.challenge);
     }else{
-        console.log("REGULAR");
-        console.log(req.body.event.text);
+        var text = req.body.event.text;
+        console.log(text);
+        var response = text;//THIS IS WHAT THE BOT WILL SAY
         var data = {
-            text: 'HELLO WORLD',
+            text: response,
             channel: req.body.event.channel
           }
         web.chat.postMessage(data);
-        res.send("HELLO MY PEEPS!");
     }
 });
 
