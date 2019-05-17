@@ -31,13 +31,10 @@ function constructResponse(input) {
     var suggestions = []
 
     if (tags.length == 0) {
-        var re = /((hi)|(hello)|(hey))/i
-        if (re.test(input))
-            return "Hello there."
         var noResults = [
-        "Unfortunately I didn't find anything to match that. Please forgive me.",
-        "Sorry, there were no results found. Reconsider your search and try again.",
-        "My systems did not return a result. Human error is copious- please reconsider and try again.",
+        "unfortunately I didn't find anything to match that. Please forgive me.",
+        "sorry, there were no results found. Reconsider your search and try again.",
+        "my systems did not return a result. Human error is copious- please reconsider and try again.",
         "I did not understand your request."
         ]
 
