@@ -1,17 +1,22 @@
 function containsIgnoreCase(list, str) {
-    for (x in list)
-        if (str.toUpperCase() === x.toUpperCase())
+    for (let member of list)
+        if (str.toUpperCase() === member.toUpperCase())
             return true
     return false
 }
 
-function extractTags(input) {
+function extractTags(input, fileName) {
 
-    var tags = ["mexican", ""]
-    var results
+    var deals = require(fileName)
+    var tags = ["random"]
+    for (let restaurant of deals.food) {
+        if (!tags.includes(restaurant.category)) 
+            tags.push(restaurant.category)
+    }
 
+    var results = []
     var words = input.split(" ")
-    for (word in words) {
+    for (let word of words) {
         if (containsIgnoreCase(tags, word))
             results.push(word)
     }
@@ -40,6 +45,7 @@ function constructResponse(tags) {
 
     return response
 }
+
 
 var express = require('express');
 var bodyParser = require('body-parser')
