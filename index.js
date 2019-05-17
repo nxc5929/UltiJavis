@@ -1,3 +1,54 @@
+var deals = require('./ultideals.json')
+
+function containsIgnoreCase(list, str) {
+    for (let member of list)
+        if (str.toUpperCase() === member.toUpperCase())
+            return true
+    return false
+}
+
+function extractTags(input) {
+
+    var tags = ["random"]
+    for (let restaurant of deals.food) {
+        if (!tags.includes(restaurant.category))
+            tags.push(restaurant.category)
+    }
+
+    var results = []
+    var words = input.split(" ")
+    for (let word of words) {
+        if (containsIgnoreCase(tags, word))
+            results.push(word)
+    }
+
+    return results
+}
+
+function constructResponse(input) {
+
+    var tags = extractTags(input)
+    var suggestions = []
+
+    if (tags.length == 0) {
+        return "No results found"
+    }
+
+    for (let tag of tags) {
+        for (let restaurant of deals.food)
+            if (restaurant.category == tag)
+                suggestions.push(restaurant)
+    }
+    var restaurant = suggestions[Math.floor(Math.random()*suggestions.length)];
+
+    var response = "I found a place you might like. Have you tried: \n"
+    response = response + restaurant.name + "\n" + restaurant.address + "\n"
+    response = response + restaurant.discount
+
+    return response
+}
+
+
 var express = require('express');
 var bodyParser = require('body-parser')
 const { WebClient } = require('@slack/web-api');
@@ -23,7 +74,7 @@ app.use('/challenge', function (req, res) {
         }
         var text = req.body.event.text;
         console.log(text)
-        var response = text; //THIS IS WHT CHAT BOT WILL SAY
+        var response = constructResponse(text); //THIS IS WHT CHAT BOT WILL SAY
         var data = {
             text: response,
             channel: req.body.event.channel
@@ -36,3 +87,4 @@ app.use('/challenge', function (req, res) {
 app.listen(process.env.PORT || 8080, function () {
   console.log('Example app listening on port ' + process.env.PORT || 8080);
 });
+
