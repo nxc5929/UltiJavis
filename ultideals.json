@@ -4,54 +4,63 @@
       "name": "Baires Grill",
       "category": "latin",
       "discount": "Monday through Friday- 10% discount for lunch Monday through Wednesday- 25% discount for dinner. Friday through Sunday- 10% disocunts for dinner",
+      "url": "https://scontent-mia3-2.xx.fbcdn.net/v/t31.0-8/1523614_10152082060127171_585175626_o.jpg?_nc_cat=102&_nc_ht=scontent-mia3-2.xx&oh=6f0c8b0de6d33d672936ce77dc24cfaf&oe=5D9DDB64",
       "address": "2210 Weston Road"
     },
     {
       "name": "BurgerFi",
       "category": "american",
       "discount": "10% off from 11:00 - 4:00 PM Monday - Friday",
+      "url": "https://alextimes.com/wp-content/uploads/2017/10/Summer-BBQ-Burger-LR-696x465.jpg",
       "address": "2810 Weston Rd"
     },
     {
       "name": "Dave and Busters",
       "category": "american",
       "discount": "UltiPeeps Dave and Busters of Hollywood is offering 10% of Dining - Food and Drinks (not Alcohol) for you and your family. Simply present your ID @ the location. Dave and Buster is also offering 15% off when booking a team event. For more information please see below. Please note: This is ONLY for the Hollywood location.",
+      "url": "https://assets.simpleviewcms.com/simpleview/image/fetch/c_fill,h_584,q_75,w_876/https://assets.simpleviewinc.com/simpleview/image/upload/crm/ftlauderdale/Sports.Lounge0_1f1f7ab8-5056-b3a8-49a1e8948e757187",
       "address": "3000 Oakwood Blvd, Hollywood, FL 33020"
     },
     {
       "name": "Del Vecchios Pizzeria",
       "category": "american",
       "discount": "10% off anytime, not including lunch specials",
+      "url": "https://digitalmarketing.blob.core.windows.net/6700/images/items/image329825.jpg",
       "address": "1795 Bell Tower Lane"
     },
     {
       "name": "Duffy's Sports Grill",
       "category": "american",
       "discount": "10% off lunch and dinner, Monday - Friday",
+      "url": "https://media-cdn.tripadvisor.com/media/photo-s/02/a3/7f/8d/filename-plantation-interior1.jpg",
       "address": "1800 Bell Tower Lane"
     },
     {
       "name": "Bugerim",
       "category": "american",
       "discount": "10% discount during 11:00am to 2:00 pm (lunch hour only)",
+      "url": "http://pantherprowler.org/wp-content/uploads/2017/04/3-Pack-Of-Mini-Burgers-3pack.jpg", 
       "address": "Weston Town Center 1735 Main Street"
     },
     {
       "name": "Firehouse Subs",
       "category": "american",
       "discount": "10% off, show your badge or wear your Ulti shirt",
+      "url": "https://s3-assets.eastidahonews.com/wp-content/uploads/2018/11/07140433/firehouse-subs.jpg",
       "address": "134 Weston Rd"
     },
     {
       "name": "Giardino Gourmet Salads",
       "category": "american",
       "discount": "10% off when you show your badge",
+      "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAY-2uSvQX_U-ioqWqF_NNTq7oouOTNlavZm586dfUN7_O1maA",
       "address": "1390 Weston Rd"
     },
     {
       "name": "Graziano's",
       "category": "latin",
-      "discount": "10% Off when you show your badge upon ordering (excludes empanadas)\nhttps://www.grazianosgroup.com/wp-content/uploads/2017/03/6_Grazianos-Weston_STG_7794-copy-web.jpg",
+      "discount": "10% Off when you show your badge upon ordering (excludes empanadas)",
+      "url": "https://www.grazianosgroup.com/wp-content/uploads/2017/03/6_Grazianos-Weston_STG_7794-copy-web.jpg",
       "address": "1717 Main St."
     },
     {
