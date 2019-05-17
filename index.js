@@ -42,7 +42,8 @@ function constructResponse(input) {
     var restaurant = suggestions[Math.floor(Math.random()*suggestions.length)];
 
     var response = "I found a place you might like. Have you tried "
-    response = response + restaurant.name + "?\n Here's more information:\n"
+    response = response + restaurant.name + "?\n"
+    response = response + "Here's more information:\n"
     response = response + restaurant.address + "\n"
     response = response + restaurant.discount
 
