@@ -10,7 +10,7 @@ function extractTags(input, fileName) {
     var deals = require(fileName)
     var tags = ["random"]
     for (let restaurant of deals.food) {
-        if (!tags.includes(restaurant.category)) 
+        if (!tags.includes(restaurant.category))
             tags.push(restaurant.category)
     }
 
