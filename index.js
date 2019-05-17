@@ -2,7 +2,7 @@ var express = require('express');
 var bodyParser = require('body-parser')
 const { WebClient } = require('@slack/web-api');
 
-var token = "xoxp-637835815733-639702220471-631872712785-cce1f88d1feec52c4b016ad24094cb50"
+var token = "xoxp-637835815733-639702220471-626774504067-765b5c6166be89590e99385b9580766d"
 const web = new WebClient(token);
 var app = express();
 
