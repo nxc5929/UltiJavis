@@ -1,3 +1,42 @@
+function containsIgnoreCase(list, str) {
+    for (x in list)
+        if (str.toUpperCase() === x.toUpperCase())
+            return true
+    return false
+}
+
+function extractTags(input) {
+
+    var tags = ["mexican", ""]
+    var results
+
+    var words = input.split(" ")
+    for (word in words) {
+        if (containsIgnoreCase(tags, word))
+            results.push(word)
+    }
+
+    return results
+}
+
+function constructResponse(tags) {
+
+    var suggestions
+
+    if (tags.length == 0) {
+        return "No results found"
+    }
+
+    for (tag in tags) {
+        var deals = require('./ultideals.json')
+        for (restaurant in deals.food)
+            if (restaurant.category == tag)
+                suggestions.push(restaurant)
+    }
+
+    return "I found a couple places you might like. Have you tried: \n" // + list
+}
+
 var express = require('express');
 var bodyParser = require('body-parser')
 const { WebClient } = require('@slack/web-api');
