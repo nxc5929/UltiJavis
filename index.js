@@ -31,7 +31,17 @@ function constructResponse(input) {
     var suggestions = []
 
     if (tags.length == 0) {
-        return "Unfortunately I didn't find anything to match that. Please forgive me."
+        var re = /((hi)|(hello)|(hey))/i
+        if (input.test(re))
+            return "Hello there."
+        var noResults = [
+        "Unfortunately I didn't find anything to match that. Please forgive me.",
+        "Sorry, there were no results found. Reconsider your search and try again.",
+        "My systems did not return a result. Human error is copious- please reconsider and try again.",
+        "I did not understand your request."
+        ]
+
+        return noResults[Math.floor(Math.random()*noResults.length)]
     }
 
     for (let tag of tags) {
