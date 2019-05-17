@@ -17,6 +17,10 @@ app.use('/challenge', function (req, res) {
     if(req.body.challenge){
         res.send(req.body.challenge);
     }else{
+        if(req.body.event.username == "UltiJavis"){
+            res.send("OK");
+            return;
+        }
         var text = req.body.event.text;
         console.log(text)
         var resposne = text; //THIS IS WHT CHAT BOT WILL SAY
