@@ -76,8 +76,9 @@ app.use('/challenge', function (req, res) {
             return;
         }
         var text = req.body.event.text;
+        var user = req.body.event.user
         console.log(text)
-        var response = constructResponse(text); //THIS IS WHT CHAT BOT WILL SAY
+        var response = "Hey <@" + user + ">\n" + constructResponse(text); //THIS IS WHT CHAT BOT WILL SAY
         var data = {
             text: response,
             channel: req.body.event.channel
