@@ -45,7 +45,7 @@ function constructResponse(input) {
     response = response + restaurant.name + "?\n"
     response = response + "Here's more information:\n"
     response = response + restaurant.address + "\n"
-    response = response + restaurant.discount
+    response = response + restaurant.discount + "\n"
     response = response + restaurant.url
 
     return response
