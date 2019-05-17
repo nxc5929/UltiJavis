@@ -18,13 +18,14 @@ app.use('/challenge', function (req, res) {
         res.send(req.body.challenge);
     }else{
         var text = req.body.event.text;
-        console.log(text);
-        var response = text;//THIS IS WHAT THE BOT WILL SAY
+        console.log(text)
+        var resposne = text; //THIS IS WHT CHAT BOT WILL SAY
         var data = {
-            text: response,
+            text: resposne,
             channel: req.body.event.channel
           }
         web.chat.postMessage(data);
+        res.send("OK");
     }
 });
 
