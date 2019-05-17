@@ -32,7 +32,7 @@ function constructResponse(input) {
 
     if (tags.length == 0) {
         var re = /((hi)|(hello)|(hey))/i
-        if (input.test(re))
+        if (re.test(input))
             return "Hello there."
         var noResults = [
         "Unfortunately I didn't find anything to match that. Please forgive me.",
