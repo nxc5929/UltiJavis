@@ -21,20 +21,24 @@ function extractTags(input) {
 
 function constructResponse(tags) {
 
-    var suggestions
+    var suggestions = []
 
     if (tags.length == 0) {
         return "No results found"
     }
-
-    for (tag in tags) {
-        var deals = require('./ultideals.json')
-        for (restaurant in deals.food)
+    var deals = require('./ultideals.json')
+    for (let tag of tags) {
+        for (let restaurant of deals.food)
             if (restaurant.category == tag)
                 suggestions.push(restaurant)
     }
+    var restaurant = suggestions[Math.floor(Math.random()*suggestions.length)];
 
-    return "I found a couple places you might like. Have you tried: \n" // + list
+    var response = "I found a place you might like. Have you tried: \n"
+    response = response + restaurant.name + "\n" + restaurant.address + "\n"
+    response = response + restaurant.discount
+
+    return response
 }
 
 var express = require('express');
@@ -72,6 +76,9 @@ app.use('/challenge', function (req, res) {
     }
 });
 
-app.listen(process.env.PORT || 8080, function () {
-  console.log('Example app listening on port ' + process.env.PORT || 8080);
-});
+// app.listen(process.env.PORT || 8080, function () {
+//   console.log('Example app listening on port ' + process.env.PORT || 8080);
+// });
+
+var thing = constructResponse(["american"])
+console.log(thing)
